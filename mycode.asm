@@ -11,18 +11,40 @@
 ;DECLARAR VARIABLES, ESTABLECER SEGMENTO DE MEMORIA DONDE VAN LAS VARIABLES
 
 
-.data
-    adorno     db '************************************************************************', 13, 10, 7, '$'
-    university db '* UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE                            *', 13, 10, 7, '$'
-    msg        db '* Tema: programacion ensamblador                                       *', 13, 10, 7, '$'
-    practice   db '* Laboratorio: #2                                                      *', 13, 10, 7, '$'
-    asignatura db '* Asignatura: Computacion Digital                                      *', 13, 10, 7, '$'
-    teacher    db '* Docente: Msc. Diego Armijos                                          *', 13, 10, 7, '$'
-    group      db '* GRUPO: G3                                                            *', 13, 10, 7, '$'     
-    autor_1    db '*   1. Jefferson Mejia                                                 *', 13, 10, 7, '$'     
-    autor_2    db '*   2. Pamela Tapia                                                    *', 13, 10, 7, '$'     
-    autor_3    db '*   3. Angel Rodriguez                                                 *', 13, 10, 7, '$'     
-    autor_4    db '*   4. Jordan Gavidia                                                  *', 13, 10, 7, '$'      
+.data         
+
+    adorno       db '************************************************************************', 13, 10, 7, '$'
+    university   db '* UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE                            *', 13, 10, 7, '$'
+    msg          db '* Tema: programacion ensamblador                                       *', 13, 10, 7, '$'
+    practice     db '* Laboratorio: #2                                                      *', 13, 10, 7, '$'
+    asignatura   db '* Asignatura: Computacion Digital                                      *', 13, 10, 7, '$'
+    teacher      db '* Docente: Msc. Diego Armijos                                          *', 13, 10, 7, '$'
+    group        db '* GRUPO#G3                                                            *', 13, 10, 7, '$'     
+    autor_1      db '*   1. Jefferson Mejia                                                 *', 13, 10, '$'     
+    autor_2      db '*   2. Pamela Tapia                                                    *', 13, 10, '$'     
+    autor_3      db '*   3. Angel Rodriguez                                                 *', 13, 10, '$'     
+    autor_4      db '*   4. Jordan Gavidia                                                  *', 13, 10, '$'      
+
+    astronaut_1  db '                                                                          ', 13, 10, '$'
+    astronaut_2  db '                                                                             ', 13, 10, '$'
+    astronaut_3  db '                                                                             ', 13, 10, '$'
+    astronaut_4  db '        _..._                                                                ', 13, 10, '$'
+    astronaut_5  db '      .""     ".      _                                                      ', 13, 10, '$'
+    astronaut_6  db '     /    .-""-\\   _/ \                                                     ', 13, 10, '$'
+    astronaut_7  db '   .-|   /:.   |  |   |                                                      ', 13, 10, '$'
+    astronaut_8  db '   |  \  |:.   /.-""-./                                                      ', 13, 10, '$'
+    astronaut_9  db '   | .-""-;:__.""""    =/                                                    ', 13, 10, '$'
+    astronaut_10 db '   .""=  *=|DREAMS_.=""                                                      ', 13, 10, '$'
+    astronaut_11 db '  /   _.  |    ;                                                             ', 13, 10, '$'
+    astronaut_12 db '  ;-.-""|    \   |                                                           ', 13, 10, '$'
+    astronaut_13 db ' /   | \    _\  _\                                                           ', 13, 10, '$'
+    astronaut_14 db ' \__/"". |  ''==''\                                                          ', 13, 10, '$'
+    astronaut_15 db '         \    \   |                                                          ', 13, 10, '$'
+    astronaut_16 db '         /    /   /                                                          ', 13, 10, '$'
+    astronaut_17 db '         /-._/._/                                                            ', 13, 10, '$'
+    astronaut_18 db '         \   ''``\  \                                                        ', 13, 10, '$'
+    astronaut_19 db '          ''-._/._/                                                          ', 13, 10, '$'
+          
 
 .code
     .startup
@@ -86,7 +108,8 @@
             mov ah, 09h
             mov dx, offset msjimp
             int 21h
-        endm
+        endm   
+ 
         
         printf adorno
         printf university 
@@ -99,6 +122,27 @@
         printf autor_2
         printf autor_3
         printf autor_4
+        printf astronaut_1  
+        printf astronaut_2
+        printf astronaut_3
+        printf astronaut_4
+        printf astronaut_5
+        printf astronaut_6
+        printf astronaut_7
+        printf astronaut_8
+        printf astronaut_9
+        printf astronaut_10
+        printf astronaut_11
+        printf astronaut_12
+        printf astronaut_11
+        printf astronaut_12
+        printf astronaut_13
+        printf astronaut_14
+        printf astronaut_15
+        printf astronaut_16
+        printf astronaut_17
+        printf astronaut_18
+        printf astronaut_19
         printf adorno
         
         ;PAUSAR PANTALLA
